@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .mobile-only {
+            display: none;
+        }
+        body {
+            background-color: #D19A6E;
+        }
+        .navbar ul {
+            background-color: #F2E8D9;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 2.5rem;
+        }
+        .navbar li {
+            list-style: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            height: 1.2rem;
+        }
+        .navbar li img {
+            height: 1.2rem;
+        }
+
+        .hero, .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50rem;
+            gap: 2rem;
+        }
+        .hero h1, .footer h2 {
+            text-align: center;
+            font-size: 8rem;
+            font-family: 'Lato', sans-serif;
+            color: #774a30;
+        }
+        .hero h1 span, .footer h2 span {
+            font-family: 'Playfair Display', serif;
+            color: #445c3b;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .buttons button {
+            height: 2rem;
+            width: 8rem;
+            background-color: #F2E8D9;
+            border-radius: 0.75rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #F2E8D9;
+        }
+        .card-container .card {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+        .card-container .card h2, h3{
+            font-family: 'Lato', sans-serif;
+        }
+        .card-container .card > img {
+            height: 25rem;
+            width: 40rem;
+            object-fit: fill;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 1920px) {
+            .card-container {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 640px) {
+            .navbar ul li {
+                display: none;
+                position: relative;
+            }
+            .navbar ul li.mobile-only {
+                display: inline-block;
+                position: absolute;
+                left: 1rem;
+            }
+            .hero h1, .footer h2 {
+                font-size: 5rem;
+            }
+            .card-container .card > img {
+                width: 22rem;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><img src="assets/icons/home.svg"></li>
+            <li>Our Products</li>
+            <li>More Services</li>
+            <li>Contact Us</li>
+            <li><img src="assets/icons/cart.svg"></li>
+            <li class="mobile-only"><img src="assets/icons/hamburger.svg"></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="hero">
+            <h1>Welcome to <br><span>Natural Bakery</span></h1>
+            <div class="buttons">
+                <button><img src="assets/icons/appstore.svg"> App Store</button>
+                <button><img src="assets/icons/googleplay.svg"> Google Play</button>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h2>Fit Box</h2>
+                <h3>from $9.90</h3>
+                <img src="assets/images/fit-box.jpg">
+                <div class="buttons">
+                    <button><img src="assets/icons/buy-now.svg"> Buy Now</button>
+                    <button><img src="assets/icons/add-to-bag.svg"> Add to Bag</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Bread Basket</h2>
+                <h3>from $12.90</h3>
+                <img src="assets/images/bread-basket.jpg">
+                <div class="buttons">
+                    <button><img src="assets/icons/buy-now.svg"> Buy Now</button>
+                    <button><img src="assets/icons/add-to-bag.svg"> Add to Bag</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Full Breakfast</h2>
+                <h3>from $14.90</h3>
+                <img src="assets/images/full-breakfast.jpg">
+                <div class="buttons">
+                    <button><img src="assets/icons/buy-now.svg"> Buy Now</button>
+                    <button><img src="assets/icons/add-to-bag.svg"> Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Wanna know <br><span>more?</span></h2>
+    </div>
+</body>
+</html>
